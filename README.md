@@ -8,7 +8,7 @@
 
 # VHAKG tools
 
-This repository provides a set of tools for searching and extracting videos from [VHAKG](https://github.com/aistairc/vhakg), a multi-modal knowledge graph (MMKG) of multi-view videos of daily activities.
+This repository provides a set of tools for searching and extracting videos from [VHAKG](https://anonymous.4open.science/r/vhakg-071D/), a multi-modal knowledge graph (MMKG) of multi-view videos of daily activities.
 
 ## Contents
 - [How to use](#how-to-use)
@@ -26,8 +26,7 @@ This repository provides a set of tools for searching and extracting videos from
 - Local machine (RAM: 32GB, HDD: free space 150GB)
     - If there is not enough free memory, loading will be skipped; increase Docker's memory allocation. We have allocated 16 GB of memory to Docker and confirmed that it works. It may work with a little less.
 - Install [Docker](https://docs.docker.com/engine/install/)
--  Download [VHAKG](https://doi.org/10.5281/zenodo.11438499)  
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11438499.svg)](https://doi.org/10.5281/zenodo.11438499)
+-  Download [VHAKG](https://anonymous.4open.science/r/vhakg-071D/)  
 
 ### GUI
 
