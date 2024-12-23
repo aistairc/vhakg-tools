@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 services:
   app:
@@ -10,24 +10,25 @@ services:
       - 5050:80
     volumes:
       - ./app/build:/usr/share/nginx/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
 
   react:
     image: node:20
     volumes:
       - ./app:/app
     command: sh -c "chmod +x /app/entrypoint.sh && /app/entrypoint.sh"
-  
+
   graphdb:
     image: ontotext/graphdb:10.4.4-arm64
     ports:
       - 7200:7200
-    entrypoint: [ "/opt/graphdb/entrypoint.sh" ]
+    entrypoint: ["/opt/graphdb/entrypoint.sh"]
     volumes:
       - ./.graphdb-data:/opt/graphdb/home
       - ./RDF:/opt/graphdb/home/graphdb-import
       - ./graphdb-repo-config.ttl:/opt/graphdb/graphdb-repo-config.ttl
       - ./entrypoint.sh:/opt/graphdb/entrypoint.sh
-    environment:  
+    environment:
       GDB_JAVA_OPTS: >-
         -Xmx2g -Xms2g
         -Dgraphdb.home=/opt/graphdb/home
